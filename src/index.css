@@ -1,0 +1,136 @@
+body {
+  background-color: gray;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin-top: 80px;
+  color: #2c3e50;
+}
+.main-frame {
+  background-color: rgb(165, 18, 18);
+  opacity: 93%;
+  height: 80vh;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+.scores {
+  background-color: white;
+  border: black 10px solid;
+  opacity: 96%;
+  margin: 10px;
+  height: 60%;
+  border-radius: 10px;
+}
+.nopeustesti {
+  display: flex;
+  background-color: rgb(165, 18, 18);
+  opacity: 93%;
+  border: black 5px solid;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 7vh;
+  color: black;
+  border-radius: 10px;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+.speedscale {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  background-color: rgb(165, 18, 18);
+  opacity: 93%;
+  height: 9vh;
+  width: 60%;
+  border: black 5px solid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.scale {
+  display: flex;
+  height: 70%;
+  width: 10%;
+  background-color: gold;
+  margin: 0.8vw;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+  color: black;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.scale-text {
+  opacity: 100%;
+}
+.display {
+  display: flex;
+  background-color: rgb(19, 11, 11);
+  opacity: 90%;
+  height: 8vh;
+  width: 150px;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vh;
+  color: rgb(165, 18, 18);
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+}
+#button-1, #button-2, #button-3, #button-4 {
+  height: 200px;
+  width: 200px;
+  margin: 2.5vw;
+  border: black 10px solid;
+  border-radius: 50%;
+}
+.button-1 {
+  background-color: blue;
+  opacity: 40%;
+}
+.button-2 {
+  background-color: yellow;
+  opacity: 40%;
+}
+.button-3 {
+  background-color: orangered;
+  opacity: 40%;
+}
+.button-4 {
+  background-color: green;
+  opacity: 40%;
+}
+.button-1-active {
+  background-color: blue;
+  opacity: 100%;
+}
+.button-2-active {
+  background-color: yellow;
+  opacity: 100%;
+}
+.button-3-active {
+  background-color: orangered;
+  opacity: 100%;
+}
+.button-4-active {
+  background-color: green;
+  opacity: 100%;
+}
