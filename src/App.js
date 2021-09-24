@@ -3,6 +3,7 @@ import useState from 'react-usestateref'
 import './App.css';
 import InfoScreen from './Components/InfoScreen';
 import Buttons from './Components/Button';
+import Modal from './Components/modal/Modal';
 
 
 function App() {
@@ -16,14 +17,16 @@ function App() {
   const [button2, setButton2] = useState(false)
   const [button3, setButton3] = useState(false)
   const [button4, setButton4] = useState(false)
-  const [timelapse, setTimelapse] = useState(4000)
+  const [timelapse, setTimelapse] = useState(2000)
 
   const startGame = () => {
     setGameOn(true)
   }
  
   const getRandom = () => {
-    return Math.floor(Math.random() * 4 + 1)
+    let ran = Math.floor(Math.random() * 4 + 1)
+    console.log(ran)
+    return ran
   }
 
   const lightOn = () => {
@@ -41,7 +44,7 @@ function App() {
           setButton3(true)
           break
         case 4:
-          setButton3(true)
+          setButton4(true)
           break
         default:
           console.log("default")
@@ -58,15 +61,22 @@ function App() {
 
   useEffect(() => {
     if (!fail && gameOn && !button1 && !button2 && !button3 && !button4) {
-      setTimelapse(timelapse * 0.95)
+      setTimelapse(timelapse * 0.99)
       console.log("timelapse", timelapse)
       lightOn()
     } else if (button1 || button2 || button3 || button4) {
-      console.log("game over")
-      alert(`game over, your score is: ${display}`)
+      //failWindow()
+      setFail(true)
     }
   }, [start, gameOn])
 
+  /*const failWindow = () => {
+    setFail(true)
+    setGameOn(false)
+    if (window.confirm(`game over, your score is: ${display}`)) {
+      window.location.reload()
+    }
+  }*/
 
   const numberDisplay = () => {
     let expr = String(display)
@@ -85,6 +95,7 @@ function App() {
   return (
     <div className="App">
       <div className="container main-frame">
+        <Modal fail={fail} display={display} />
         <InfoScreen display={numberDisplay()} setDisplay={setDisplay} setGameOn={setGameOn} startGame={startGame} setFail={setFail} setTimelapse={setTimelapse} />
         <Buttons display={display} setDisplay={setDisplay}
         button1={button1} setButton1={setButton1}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Buttons = ({ display, setDisplay, button1, button2, button3, button4, setButton1, setButton2, setButton3, setButton4, setFail }) => {
+const Buttons = ({ display, setDisplay, button1, button2, button3, button4, setButton1, setButton2, setButton3, setButton4, setFail, failWindow }) => {
 
     //const [confirmed, setConfirmed] = useState(false)
 
@@ -29,6 +29,7 @@ const Buttons = ({ display, setDisplay, button1, button2, button3, button4, setB
             setButton(!button)
             setDisplay(display + 1)
         } else {
+            //failWindow()
             setFail(true)
         }
     }

@@ -1,0 +1,63 @@
+.modal {
+    position: fixed;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    overflow-x: hidden;
+    background-color: rgba(31, 32, 41, 0.75);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 250ms 700ms ease;
+  }
+  input {
+      font-size: 20px !important;
+  }
+  
+  .visible {
+    pointer-events: auto;
+    opacity: 0.95;
+    transition: all 300ms ease-in-out;
+  }
+  .visible .modal__wrap {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
+  }
+  @media (orientation: landscape) {
+    .modal__wrap {
+      background-color: black;
+      text-align: center;
+      justify-content: center;
+      font-size: 40px;
+      color: gold;
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      top: 25%;
+      border-radius: 10px;
+      opacity: 0.5;
+    }
+  }
+  @media (orientation: portrait) {
+    .modal__wrap {
+      background-color: black;
+      text-align: center;
+      justify-content: center;
+      font-size: 5vh;
+      color: gold;
+      width: 80%;
+      height: 60%;
+      position: absolute;
+      top: 25%;
+      border-radius: 10px;
+      opacity: 0.5;
+    }
+  }
+
