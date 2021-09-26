@@ -1,39 +1,38 @@
 {
-  "name": "speedtest",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "react-usestateref": "^1.0.5",
-    "web-vitals": "^1.1.2"
+  "name": "nopeuspeli",
+  "version": "1.0.0",
+  "description": "backend for nopeuspeli client",
+  "main": "index.js",
+  "engines": {
+    "node": "12.x"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest --verbose --runInBand",
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development nodemon index.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vpaasovaara/nopeuspeli.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "Ville",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vpaasovaara/nopeuspeli/issues"
+  },
+  "homepage": ".",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.0.7",
+    "nodemon": "^2.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "compilerOptions": {
+    "baseUrl": "./src"
   }
 }

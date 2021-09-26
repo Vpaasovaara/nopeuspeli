@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import useState from 'react-usestateref'
-import './App.css';
 import InfoScreen from './Components/InfoScreen';
 import Buttons from './Components/Button';
 import Modal from './Components/modal/Modal';
@@ -18,15 +17,15 @@ function App() {
   const [button3, setButton3] = useState(false)
   const [button4, setButton4] = useState(false)
   const [timelapse, setTimelapse] = useState(2000)
+ 
 
   const startGame = () => {
     setGameOn(true)
   }
  
   const getRandom = () => {
-    let ran = Math.floor(Math.random() * 4 + 1)
-    console.log(ran)
-    return ran
+    let rand = Math.floor(Math.random() * 4 + 1)
+    return rand
   }
 
   const lightOn = () => {
@@ -62,7 +61,7 @@ function App() {
   useEffect(() => {
     if (!fail && gameOn && !button1 && !button2 && !button3 && !button4) {
       setTimelapse(timelapse * 0.99)
-      console.log("timelapse", timelapse)
+      //console.log("timelapse", timelapse)
       lightOn()
     } else if (button1 || button2 || button3 || button4) {
       //failWindow()
@@ -96,7 +95,7 @@ function App() {
     <div className="App">
       <div className="container main-frame">
         <Modal fail={fail} display={display} />
-        <InfoScreen display={numberDisplay()} setDisplay={setDisplay} setGameOn={setGameOn} startGame={startGame} setFail={setFail} setTimelapse={setTimelapse} />
+        <InfoScreen display={numberDisplay()} setDisplay={setDisplay} startGame={startGame} setFail={setFail} setTimelapse={setTimelapse} gameOn={gameOn} />
         <Buttons display={display} setDisplay={setDisplay}
         button1={button1} setButton1={setButton1}
         button2={button2} setButton2={setButton2}

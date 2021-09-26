@@ -4,12 +4,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 100;
     overflow-x: hidden;
     background-color: rgba(31, 32, 41, 0.75);
     pointer-events: none;
@@ -22,7 +22,8 @@
   
   .visible {
     pointer-events: auto;
-    opacity: 0.95;
+    opacity: 1;
+    z-index: 10;
     transition: all 300ms ease-in-out;
   }
   .visible .modal__wrap {
@@ -35,14 +36,15 @@
       background-color: black;
       text-align: center;
       justify-content: center;
-      font-size: 40px;
+      font-size: 35px;
       color: gold;
       width: 400px;
       height: 400px;
       position: absolute;
       top: 25%;
       border-radius: 10px;
-      opacity: 0.5;
+      opacity: 1;
+      z-index: 10 !important;
     }
   }
   @media (orientation: portrait) {
@@ -57,7 +59,7 @@
       position: absolute;
       top: 25%;
       border-radius: 10px;
-      opacity: 0.5;
+      opacity: 1;
+      z-index: 10;
     }
   }
-
