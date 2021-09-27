@@ -6,19 +6,27 @@
   margin-top: 80px;
   color: #2c3e50;
 }
+body {
+  background-color:darkgray;
+}
 .mainframe {
   background-color: rgb(165, 18, 18);
-  height: 80vh;
-  padding-top: 10px;
+  min-height: 40vh;
+  overflow: hidden;
   border-radius: 10px;
-  display: absolute;
+  position: absolute;
+  padding-top: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 @media (orientation: landscape) {
   .scores {
     background-color: white;
     border: black 10px solid;
     margin: 10px;
-    min-height: 60%;
+    height: 50vh;
     border-radius: 10px;
   }
   .nopeustesti {
@@ -56,8 +64,10 @@
   .scores {
     background-color: white;
     border: black 10px solid;
-    margin: 10px;
-    min-height: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 60vh;
     border-radius: 10px;
   }
   .nopeustesti {
@@ -112,9 +122,6 @@
   font-weight: 600;
   border-radius: 10px;
 }
-.scale-text {
-  opacity: 100%;
-}
 .display {
   display: flex;
   background-color: rgb(19, 11, 11);
@@ -132,18 +139,28 @@
 .buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 10px;
   align-items: center;
   min-height: 80px;
 }
-#button-1, #button-2, #button-3, #button-4 {
-  width: 15vw;
-  aspect-ratio: 1 / 1;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  border: black 0.5vw solid;
-  border-radius: 50%;
+@media (orientation: portrait) {
+  #button-1, #button-2, #button-3, #button-4 {
+    width: 23%;
+    aspect-ratio: 1 / 1;
+    border: black 0.5vw solid;
+    border-radius: 50%;
+  }
 }
+@media (orientation: landscape) {
+  #button-1, #button-2, #button-3, #button-4 {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    border: black 0.5vw solid;
+    border-radius: 50%;
+  }
+}
+
 .button-1 {
   background-color: rgba(0, 0, 255, 0.2);
 }

@@ -47,13 +47,10 @@ const Buttons = ({ display, setDisplay, button1, button2, button3, button4, setB
     )
 }
 
-const hideButtons = { zIndex: 1 }
-const showButtons = { zIndex: 1 }
-
 
 const OneButton = ({ id, plusOne, className, gameOn }) => (
     <div 
-        className={className} id={id} style={gameOn ? showButtons : hideButtons}
+        className={className} id={id}
         onClick={() => plusOne(id)}>
     </div>
 )
