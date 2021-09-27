@@ -3,7 +3,9 @@ const baseUrl = '/api/names'
 
 
 const getAll = async () => {
-    const request = axios.get(baseUrl)
+    const config = { headers: { 'content-type': 'application/json' } }
+
+    const request = axios.get(baseUrl, config)
     const response = await request
     return response.data
 }

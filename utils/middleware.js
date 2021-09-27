@@ -38,7 +38,7 @@ const errorHandler = (error, request, response, next) => {
 }
 
 const homepage = (request, response, next) => {
-  if ( request.path == '/*' ) return response.status(200).redirect('/index.html')
+  if ( request.path == '/' ) return response.status(200).redirect('/index.html')
 }
 
 

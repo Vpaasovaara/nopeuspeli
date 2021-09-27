@@ -47,7 +47,7 @@ const Buttons = ({ display, setDisplay, button1, button2, button3, button4, setB
     )
 }
 
-const hideButtons = { zIndex: -1 }
+const hideButtons = { zIndex: 1 }
 const showButtons = { zIndex: 1 }
 
 

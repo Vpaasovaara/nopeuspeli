@@ -4,7 +4,6 @@ import InfoScreen from './Components/InfoScreen';
 import Buttons from './Components/Button';
 import Modal from './Components/modal/Modal';
 
-
 function App() {
 
   const [display, setDisplay] = useState(0)
@@ -61,21 +60,12 @@ function App() {
   useEffect(() => {
     if (!fail && gameOn && !button1 && !button2 && !button3 && !button4) {
       setTimelapse(timelapse * 0.99)
-      //console.log("timelapse", timelapse)
       lightOn()
     } else if (button1 || button2 || button3 || button4) {
-      //failWindow()
       setFail(true)
     }
   }, [start, gameOn])
 
-  /*const failWindow = () => {
-    setFail(true)
-    setGameOn(false)
-    if (window.confirm(`game over, your score is: ${display}`)) {
-      window.location.reload()
-    }
-  }*/
 
   const numberDisplay = () => {
     let expr = String(display)
@@ -93,7 +83,7 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="container main-frame">
+      <div className="container mainframe">
         <Modal fail={fail} display={display} />
         <InfoScreen display={numberDisplay()} setDisplay={setDisplay} startGame={startGame} setFail={setFail} setTimelapse={setTimelapse} gameOn={gameOn} />
         <Buttons display={display} setDisplay={setDisplay}

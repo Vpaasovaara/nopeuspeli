@@ -34,11 +34,11 @@ const Modal = ({ fail, display }) => {
         <React.Fragment>
             <div ref={modalRef}  className={`${styles.modal}`}>
                 <div className={styles.modal__wrap}>
-                    <p>game over, your score is: {display}</p>
+                    <p>Peli ohi, pisteesi on: {display}</p>
                     <form onSubmit={handleSubmit}>
-                        <label htmlFor="name">Enter your name here to submit your score</label>
+                        <label htmlFor="name">Laita nimesi alla olevaan kenttään ja jaa muille käyttäjille tuloksesi :)</label>
                         <input
-                            placeholder="name"
+                            placeholder="nimi"
                             id="name"
                             type="text"
                             value={name}
@@ -46,8 +46,8 @@ const Modal = ({ fail, display }) => {
                             onChange={({ target }) =>
                                 setName(target.value)}
                             required/><br />
-                        <button className="btn btn-success mx-3" type="submit">Submit</button>
-                        <div className="btn btn-warning mx-3" onClick={() => window.location.reload()}>Close</div>
+                        <button className="btn btn-success mx-3" type="submit">Lähetä</button>
+                        <div className="btn btn-warning mx-3" onClick={() => window.location.reload()}>Sulje</div>
                     </form>
                 </div>
             </div>

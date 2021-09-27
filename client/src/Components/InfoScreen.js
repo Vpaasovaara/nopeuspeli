@@ -3,7 +3,7 @@ import Scores from './modal/Scores';
 import nameService from "./modal/services/names"
 
 const InfoScreen = ({ display, startGame, gameOn }) => {
-    
+
     const [scores, setScores] = useState([])
     const [isVisible, setIsVisible] = useState(false)
     
@@ -12,7 +12,7 @@ const InfoScreen = ({ display, startGame, gameOn }) => {
             nameService.getAll().then(scores => {
                 scores.sort((a, b) => {
                     return b.score - a.score
-                })
+                })     
                 setScores(scores)
             })
             setIsVisible(true)

@@ -7,7 +7,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "test": "jest --verbose --runInBand",
+    "test": "NODE_ENV=test jest --verbose --runInBand",
     "start": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development nodemon index.js"
   },
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Vpaasovaara/nopeuspeli/issues"
   },
-  "homepage": ".",
+  "homepage": "https://github.com/Vpaasovaara/nopeuspeli#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -31,8 +31,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
-  },
-  "compilerOptions": {
-    "baseUrl": "./src"
   }
 }

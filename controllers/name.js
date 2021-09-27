@@ -5,9 +5,9 @@ const Names = require('../models/names')
 namesRouter.get('/', async(request, response) => {
   const names = await Names
     .find({})
-  
-  console.log(names)
-  response.json(names)
+    console.log(names)
+
+  response.json(names.map(x => x.toJSON()))
 
 })
 

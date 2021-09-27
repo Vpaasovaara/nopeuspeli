@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from "./modal.module.css"
 
 
@@ -36,7 +36,7 @@ const Scores = ({ isVisible, setIsVisible, scores }) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {scores.map(score => <User score={score.score} name={score.name} key={score.id} />)}
+                                {scores.map(user => <User score={user.score} name={user.name} key={user.id}/>)}
                             </tbody>
                         </table>
                     </div>
