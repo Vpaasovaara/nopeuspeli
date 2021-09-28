@@ -91,10 +91,9 @@ function App() {
         button2={button2} setButton2={setButton2}
         button3={button3} setButton3={setButton3}
         button4={button4} setButton4={setButton4}
-        setGameOn={setGameOn} gameOn={gameOn}
+         gameOn={gameOn}
         setTimeOn={setTimeOn} timeOn={timeOn}
-        setFail={setFail} fail={fail}
-        lightOn={lightOn}/>
+        setFail={setFail}/>
       </div>
     </div>
   );

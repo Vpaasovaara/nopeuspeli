@@ -52,8 +52,8 @@ const userStyleBronze =  { color: "#D17B36" }
 const defaultStyle = { color: "#414a4c" }
 
 const User = ({ score, name }) => (
-    <tr className="table-dark" style={Number(score) > 300 ? userStyleGold 
-        : Number(score) > 200 ? userStyleSilver : Number(score) > 100 ? userStyleBronze : defaultStyle}>
+    <tr className="table-dark" style={Number(score) > 200 ? userStyleGold 
+        : Number(score) > 150 ? userStyleSilver : Number(score) > 100 ? userStyleBronze : defaultStyle}>
         <th scope="row">{name}</th>
         <td>{score}</td>
     </tr>
