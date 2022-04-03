@@ -4,7 +4,7 @@
   "description": "backend for nopeuspeli client",
   "main": "index.js",
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },
   "scripts": {
     "test": "NODE_ENV=test jest --verbose --runInBand",

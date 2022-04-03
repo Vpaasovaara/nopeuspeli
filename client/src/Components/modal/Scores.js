@@ -59,10 +59,3 @@ const User = ({ score, name }) => (
     </tr>
 ) 
 export default Scores
-
-/*{scores.map(score => {
-    <tr className="table-light">
-        <th scope="row">{score.name}</th>
-        <td>{score.score}</td>
-    </tr>
-})}*/

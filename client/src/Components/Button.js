@@ -39,16 +39,16 @@ const Buttons = ({ display, setDisplay, button1, button2, button3, button4, setB
 
     return (
         <div className="buttons">
-            <OneButton className={className1} id="button-1" plusOne={plusOne} gameOn={gameOn}/>
-            <OneButton className={className2} id="button-2" plusOne={plusOne} gameOn={gameOn}/>
-            <OneButton className={className3} id="button-3" plusOne={plusOne} gameOn={gameOn}/>
-            <OneButton className={className4} id="button-4" plusOne={plusOne} gameOn={gameOn}/>
+            <OneButton className={className1} id="button-1" plusOne={plusOne} />
+            <OneButton className={className2} id="button-2" plusOne={plusOne} />
+            <OneButton className={className3} id="button-3" plusOne={plusOne} />
+            <OneButton className={className4} id="button-4" plusOne={plusOne} />
         </div>
     )
 }
 
 
-const OneButton = ({ id, plusOne, className, gameOn }) => (
+const OneButton = ({ id, plusOne, className }) => (
     <div 
         className={className} id={id}
         onClick={() => plusOne(id)}>
