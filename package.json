@@ -29,6 +29,9 @@
     "nodemon": "^2.0.13"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "minimist": ">=1.2.6",
+    "url-parse": ">=1.5.9",
+    "immer": ">=9.0.6"
   }
 }
